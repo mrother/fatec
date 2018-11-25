@@ -73,7 +73,7 @@ def button(bot, update):
 
 
 def main():
-    updater = Updater('677928807:AAHMhvBtIqyFPu3EUX9R3_Fvl9gSEJyxeeI')
+    updater = Updater('****')
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('hello', hello))
     dp.add_handler(CommandHandler('users', users))
