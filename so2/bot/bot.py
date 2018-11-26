@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, logging, telegram, configparser
+import os, socket, psutil, logging, telegram, configparser
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ChosenInlineResultHandler
 from zeeto import users as userlib
@@ -60,12 +60,30 @@ Informe a ação que você deseja realizar:
 
 def status(bot, update):
     info = """
-Certo, você quer gerenciar seus usuários.
-Informe a ação que você deseja realizar:    
-    """.format(name=update.message.from_user.first_name)
+Status atual do servidor:
+    """.format(name=update.message.from_user.first_name).strip()
 
-    result = os.cpu_count()
-    update.message.reply_text(result)
+    info += "\nHostname: " + str(socket.gethostname())
+    info += "\nKernel: " + os.uname()[2]
+    info += "\nPlataforma: " + os.uname()[4]
+    info += "\n\n+Memória"
+    info += "\n+--total: " + '{0:.2f}'.format(psutil.virtual_memory().total / 1024 / 1024) + ' MB'
+    info += "\n+--usada: " + '{0:.2f}'.format(psutil.virtual_memory().used / 1024 / 1024) + ' MB'
+    info += "\n+--disponível: " + '{0:.2f}'.format(psutil.virtual_memory().available / 1024 / 1024) + ' MB'
+    info += "\n+--livre: " + '{0:.2f}'.format(psutil.virtual_memory().free / 1024 / 1024)
+    info += "\n\n+Uso do disco: "
+    info += "\n+--Total: " + '{0:.2f}'.format(psutil.disk_usage('/').total / 1024 / 1024 / 1024) + ' GB'
+    info += "\n+--Usado: " + '{0:.2f}'.format(psutil.disk_usage('/').used / 1024 / 1024 / 1024) + ' GB'
+    info += "\n+--Livre: " + '{0:.2f}'.format(psutil.disk_usage('/').free / 1024 / 1024 / 1024) + ' GB'
+
+    info += "\n\nUsuários logados"
+    for user in psutil.users():
+        info += "\n" + user.terminal + " - " + user.name + " - PID: " + str(user.pid)
+
+    # for proc in psutil.process_iter(attrs=['pid', 'name']):
+    #     info += '\n' + proc.info['name']
+
+    update.message.reply_text(info)
 
 
 def user_button(bot, update):
@@ -88,8 +106,7 @@ def user_button(bot, update):
 
         user = userlib.ManageUser()
         for user in user.list():
-            print(type(user))
-            keyboard.append([InlineKeyboardButton(user.strip(), callback_data=user.strip())])
+            keyboard.append([InlineKeyboardButton(user.strip(), callback_data="user_passwd_pass")])
 
         keyboard.append([InlineKeyboardButton("<< Voltar", callback_data="users")])
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -98,12 +115,12 @@ def user_button(bot, update):
                               text='Mudar a senha de qual usuário?',
                               chat_id=query.message.chat_id,
                               reply_markup=reply_markup)
+    elif query.data == 'user_passwd_'
     elif query.data == 'user_delete':
         keyboard = []
 
         user = userlib.ManageUser()
         for user in user.list():
-            print(type(user))
             keyboard.append([InlineKeyboardButton(user.strip(), callback_data=user.strip())])
 
         keyboard.append([InlineKeyboardButton("<< Voltar", callback_data="users")])
