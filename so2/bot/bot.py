@@ -119,11 +119,7 @@ def user_button(bot, update):
 
 
 def main():
-<<<<<<< HEAD
     updater = Updater(token=config['DEFAULT']['token'])
-=======
-    updater = Updater('****')
->>>>>>> a4e585c28740e82c69b19c9c6a8eba6acecf73b4
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('hello', hello))
     dp.add_handler(CommandHandler('start', hello))
