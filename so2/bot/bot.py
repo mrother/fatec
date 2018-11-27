@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, socket, psutil, logging, telegram, configparser
+import os, socket, psutil, logging, telegram, configparser, getpass
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ChosenInlineResultHandler
 from zeeto import users as userlib
@@ -80,8 +80,12 @@ Status atual do servidor:
     for user in psutil.users():
         info += "\n" + user.terminal + " - " + user.name + " - PID: " + str(user.pid)
 
-    # for proc in psutil.process_iter(attrs=['pid', 'name']):
-    #     info += '\n' + proc.info['name']
+    pids = [(p.pid, p.info['name'], p.info['username']) for p in psutil.process_iter(attrs=['name', 'username']) if
+            p.info['username'] == getpass.getuser()]
+
+    info += "\n\nProcessos em execução: "
+    for pid in pids:
+        info += '\n' + str(pid[0]) + '\t' + pid[1]
 
     update.message.reply_text(info)
 
@@ -106,7 +110,7 @@ def user_button(bot, update):
 
         user = userlib.ManageUser()
         for user in user.list():
-            keyboard.append([InlineKeyboardButton(user.strip(), callback_data="passwd|"+user)])
+            keyboard.append([InlineKeyboardButton(user.strip(), callback_data="passwd|" + user)])
 
         keyboard.append([InlineKeyboardButton("<< Voltar", callback_data="users")])
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -139,7 +143,7 @@ def passwd(bot, update):
     data = query.data.split('|')
     print(data)
     if data[0] == 'passwd':
-        bot.send_message(text='Senha nova para ' + data[1]+':',
+        bot.send_message(text='Senha nova para ' + data[1] + ':',
                          chat_id=query.message.chat_id,
                          reply_markup=ForceReply())
 
