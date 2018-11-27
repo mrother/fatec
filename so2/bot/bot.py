@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os, socket, psutil, logging, telegram, configparser
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ChosenInlineResultHandler
 from zeeto import users as userlib
 
@@ -106,7 +106,7 @@ def user_button(bot, update):
 
         user = userlib.ManageUser()
         for user in user.list():
-            keyboard.append([InlineKeyboardButton(user.strip(), callback_data="user_passwd_pass")])
+            keyboard.append([InlineKeyboardButton(user.strip(), callback_data="passwd|"+user)])
 
         keyboard.append([InlineKeyboardButton("<< Voltar", callback_data="users")])
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -115,7 +115,6 @@ def user_button(bot, update):
                               text='Mudar a senha de qual usuário?',
                               chat_id=query.message.chat_id,
                               reply_markup=reply_markup)
-    elif query.data == 'user_passwd_'
     elif query.data == 'user_delete':
         keyboard = []
 
@@ -135,6 +134,16 @@ def user_button(bot, update):
         print('vsf')
 
 
+def passwd(bot, update):
+    query = update.callback_query
+    data = query.data.split('|')
+    print(data)
+    if data[0] == 'passwd':
+        bot.send_message(text='Senha nova para ' + data[1]+':',
+                         chat_id=query.message.chat_id,
+                         reply_markup=ForceReply())
+
+
 def main():
     updater = Updater(token=config['DEFAULT']['token'])
     dp = updater.dispatcher
@@ -143,7 +152,7 @@ def main():
     dp.add_handler(CommandHandler('users', users))
     dp.add_handler(CommandHandler('status', status))
     dp.add_handler(CallbackQueryHandler(user_button, pattern="user_.+"))
-    dp.add_handler(CallbackQueryHandler(users, pattern="users"))
+    dp.add_handler(CallbackQueryHandler(passwd, pattern="passwd.+"))
 
     updater.start_polling()
     updater.idle()
