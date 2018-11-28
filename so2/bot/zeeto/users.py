@@ -95,7 +95,7 @@ class ManageUser(object):
         if not self.exists(user=kwargs['user']):
             if 'p' in kwargs:
                 kwargs['p'] = crypt.crypt(kwargs['p'], "22")
-            cmd = 'adduser'
+            cmd = 'useradd -m'
 
             for key, value in kwargs.items():
                 if not key is 'user':
@@ -103,6 +103,7 @@ class ManageUser(object):
                 else:
                     cmd = cmd + ' ' + value
 
+            print(cmd)
             self._exec_command(cmd)
 
             if self.exists(user=kwargs['user']):
@@ -126,10 +127,12 @@ class ManageUser(object):
             UserNotExist
         """
         if self.exists(user=kwargs['user']):
-            proc = sub.Popen(['passwd', kwargs['user'], '--stdin'], stdin=sub.PIPE)
-            proc.stdin.write(kwargs['password'] + '\n')
-            proc.stdin.write(kwargs['password'])
-            proc.stdin.flush()
+            cmd = "echo \"{user}:{password}\" | chpasswd".format(user=kwargs['user'], password=kwargs['password'.strip()])
+            print(cmd)
+            self._exec_command(cmd)
+            # proc = sub.Popen([cmd],
+            #                  stdin=sub.PIPE,
+            #                  encoding='utf-8')
             return True
         else:
             raise UserNotExist()

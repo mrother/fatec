@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os, socket, psutil, logging, telegram, configparser, getpass
+import os, socket, psutil, logging, telegram, configparser, getpass, redis
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ChosenInlineResultHandler
-from zeeto import users as userlib
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters
+from zeeto import ManageUser
 
 # Configuring bot
 config = configparser.ConfigParser()
 config.read_file(open('config.ini'))
+
+# Connecting to Redis db
+db = redis.StrictRedis(host=config['DB']['host'],
+                       port=config['DB']['port'],
+                       db=config['DB']['db'],
+                       password=config['DB']['password'])
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -96,7 +102,7 @@ def user_button(bot, update):
     if query.data == 'user_list':
         info = "Usuários do sistema (UID > 1000):\n\n"
 
-        user = userlib.ManageUser()
+        user = ManageUser()
         for user in user.list():
             info = info + user + '\n'
 
@@ -104,15 +110,18 @@ def user_button(bot, update):
                               chat_id=query.message.chat_id,
                               message_id=query.message.message_id)
     elif query.data == 'user_create':
-        print('weeee')
+        last_message = bot.send_message(text='Nome do novo usuário :',
+                                        chat_id=query.message.chat_id,
+                                        reply_markup=ForceReply())
+        db.set('last_message_id', last_message.message_id)
+        db.set('last_message_action', 'user_new')
     elif query.data == 'user_passwd':
         keyboard = []
 
-        user = userlib.ManageUser()
+        user = ManageUser()
         for user in user.list():
             keyboard.append([InlineKeyboardButton(user.strip(), callback_data="passwd|" + user)])
 
-        keyboard.append([InlineKeyboardButton("<< Voltar", callback_data="users")])
         reply_markup = InlineKeyboardMarkup(keyboard)
 
         bot.edit_message_text(message_id=query.message.message_id,
@@ -122,30 +131,73 @@ def user_button(bot, update):
     elif query.data == 'user_delete':
         keyboard = []
 
-        user = userlib.ManageUser()
+        user = ManageUser()
         for user in user.list():
-            keyboard.append([InlineKeyboardButton(user.strip(), callback_data=user.strip())])
+            keyboard.append([InlineKeyboardButton(user.strip(), callback_data="delete|" + user)])
 
-        keyboard.append([InlineKeyboardButton("<< Voltar", callback_data="users")])
         reply_markup = InlineKeyboardMarkup(keyboard)
 
-        bot.edit_message_text(message_id=query.message.message_id,
-                              text='Qual usuário deseja excluir?',
-                              chat_id=query.message.chat_id,
-                              reply_markup=reply_markup)
+        last_message = bot.edit_message_text(message_id=query.message.message_id,
+                                             text='Qual usuário deseja excluir?',
+                                             chat_id=query.message.chat_id,
+                                             reply_markup=reply_markup)
+        db.set('last_message_id', last_message.message_id)
+        db.set('last_message_action', 'user_del')
 
     else:
         print('vsf')
 
+def proc_button(bot, update):
+    query = update.callback_query
+    info = ""
+
+    pids = [(p.pid, p.info['name'], p.info['username']) for p in psutil.process_iter(attrs=['name', 'username']) if
+            p.info['username'] == getpass.getuser()]
+
+
+    for pid in pids:
+        info += '\n' + str(pid[0]) + '\t' + pid[1]
 
 def passwd(bot, update):
     query = update.callback_query
     data = query.data.split('|')
-    print(data)
     if data[0] == 'passwd':
-        bot.send_message(text='Senha nova para ' + data[1] + ':',
-                         chat_id=query.message.chat_id,
-                         reply_markup=ForceReply())
+        last_message = bot.send_message(text='Senha nova para ' + data[1] + ':',
+                                        chat_id=query.message.chat_id,
+                                        reply_markup=ForceReply())
+        db.set('last_message_id', last_message.message_id)
+        db.set('last_message_action', 'chpasswd|' + data[1])
+
+
+def userDelete(bot, update):
+    query = update.callback_query
+    data = query.data.split('|')
+    if data[0] == 'passwd':
+        last_message = bot.send_message(text='Digite "sim" para confirmar a exclusão de ' + data[1] + ':',
+                                        chat_id=query.message.chat_id,
+                                        reply_markup=ForceReply())
+        db.set('last_message_id', last_message.message_id)
+        db.set('last_message_action', 'user_del|' + data[1])
+
+
+def processMessages(bot, update):
+    last_message_id = int(db.get('last_message_id'))
+    last_message_action = db.get('last_message_action')
+    last_message_action = last_message_action.decode()
+    print(last_message_action)
+    if update.message.reply_to_message.message_id == last_message_id and last_message_action.split('|')[
+        0] == 'chpasswd':
+        user = ManageUser()
+        user.update_password(user=last_message_action.split('|')[1], password=str(update.message.text))
+        bot.send_message(text="Senha atualizada com sucesso!", chat_id=update.message.chat_id)
+    elif update.message.reply_to_message.message_id == last_message_id and last_message_action == 'user_new':
+        user = ManageUser()
+        user.create(user=str(update.message.text))
+        bot.send_message(text="Usuário criado com sucesso!", chat_id=update.message.chat_id)
+    elif update.message.reply_to_message.message_id == last_message_id and last_message_action == 'user_del':
+        user = ManageUser()
+        user.delete(user=str(update.message.text))
+        bot.send_message(text="Usuário removido com sucesso!", chat_id=update.message.chat_id)
 
 
 def main():
@@ -155,8 +207,12 @@ def main():
     dp.add_handler(CommandHandler('start', hello))
     dp.add_handler(CommandHandler('users', users))
     dp.add_handler(CommandHandler('status', status))
+
+    dp.add_handler(MessageHandler(Filters.text, processMessages))
+
     dp.add_handler(CallbackQueryHandler(user_button, pattern="user_.+"))
     dp.add_handler(CallbackQueryHandler(passwd, pattern="passwd.+"))
+    dp.add_handler(CallbackQueryHandler(userDelete, pattern="delete.+"))
 
     updater.start_polling()
     updater.idle()
