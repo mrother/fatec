@@ -9,11 +9,15 @@ Logotipo
 
 ## Controle de Versão
 
-| #id | Breve descrição | Responsável | x |
+| #id | Breve descrição | Responsável | Data |
 |--|--|--|--|
-| 01 | Elaboração do TAP | Mauricio Rother | x |
+| 01 | Elaboração do TAP | Mauricio Rother | 10/06/2020 |
 
+## Content
+
+## Aprovação
+Assinaturas das partes
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNjI2OTU4OCwtMTY5OTQxNDY1NiwxMj
-QyMjUzMjg4XX0=
+eyJoaXN0b3J5IjpbODM3MDczNjM1LDEzMTYyNjk1ODgsLTE2OT
+k0MTQ2NTYsMTI0MjI1MzI4OF19
 -->
