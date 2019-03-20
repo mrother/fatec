@@ -5,7 +5,9 @@ Logotipo
 
 ## Gerenciamento de Integração ==(nome do escopo)==
 
-## TAP - Termo de Abertura de Projeto ==(Project Chart)==
+## TAP - Termo de Abertura de Projeto ==(Project Charter)==
+
+## Controle de Versão
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MjI1MzI4OF19
+eyJoaXN0b3J5IjpbLTE2OTk0MTQ2NTYsMTI0MjI1MzI4OF19
 -->
