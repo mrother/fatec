@@ -9,11 +9,11 @@ Logotipo
 
 ## Controle de Versão
 
-| #id | Breve descrição |
-|--|--|
-|  |  |
+| #id | Breve descrição | Responsável | x |
+|--|--|--|--|
+| 01 | Elaboração do TAP | Mauricio Rother | x |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0MzU0MTgxLC0xNjk5NDE0NjU2LDEyND
-IyNTMyODhdfQ==
+eyJoaXN0b3J5IjpbMTMxNjI2OTU4OCwtMTY5OTQxNDY1NiwxMj
+QyMjUzMjg4XX0=
 -->
