@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activies.MainActivity">
+    <!--android:background="@drawable/background1">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:background="#3f51b5">
+
+<!--
+        <TextView style="@style/texts"
+            android:text="@string/player_one" />
+
+        <TextView style="@style/texts"
+            android:text="@string/vs"/>
+
+        <TextView  style="@style/texts"
+            android:text="@string/player_two" />
+-->
+        <TextView  style="@style/texts"
+            android:textStyle="bold"
+            android:text="@string/title" />
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+        style="@style/linhas"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:background="#9ea9b2ed">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                style="@style/butTic"
+                android:id="@+id/but00"
+                android:onClick="Jogada"
+              />
+
+            <View android:layout_width="match_parent"
+                style="@style/linhas"/>
+
+            <Button style="@style/butTic"
+                android:id="@+id/but01"
+                android:onClick="Jogada"/>
+
+            <View android:layout_width="match_parent"
+                style="@style/linhas"/>
+
+            <Button style="@style/butTic"
+                android:id="@+id/but02"
+                android:onClick="Jogada"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            style="@style/linhas">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button style="@style/butTic"
+                android:id="@+id/but10"
+                android:onClick="Jogada"
+                android:tag="1"/>
+
+            <View android:layout_width="match_parent"
+                style="@style/linhas"/>
+
+            <Button style="@style/butTic"
+                android:id="@+id/but11"
+                android:onClick="Jogada"/>
+
+            <View android:layout_width="match_parent"
+                style="@style/linhas"/>
+
+            <Button style="@style/butTic"
+                android:id="@+id/but12"
+                android:onClick="Jogada"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            style="@style/linhas">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button style="@style/butTic"
+                android:id="@+id/but20"
+                android:onClick="Jogada"/>
+
+            <View android:layout_width="match_parent"
+                style="@style/linhas"/>
+
+            <Button style="@style/butTic"
+                android:id="@+id/but21"
+                android:onClick="Jogada"/>
+
+            <View android:layout_width="match_parent"
+                style="@style/linhas"/>
+
+            <Button style="@style/butTic"
+                android:id="@+id/but22"
+                android:onClick="Jogada"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        style="@style/butResert"
+        android:text="@string/resert"
+        android:id="@+id/butResert"
+        android:onClick="resetGame"/>
+
+</LinearLayout>

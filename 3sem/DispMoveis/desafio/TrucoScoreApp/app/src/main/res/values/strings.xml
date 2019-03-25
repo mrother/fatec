@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Marcador de Truco</string>
+    <string name="team_a">Nós</string>
+    <string name="team_b">Eles</string>
+</resources>

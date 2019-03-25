@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Fuel Consumption</string>
+    <!-- Tela 1 -->
+    <string name="price_per_liter_text">Price per Liter (U$)</string>
+    <string name="average_milage_text">Avarage Consumption (Km/Liter)</string>
+    <string name="etanol_text">Ethanol</string>
+    <string name="gas_text">Gas</string>
+    <string name="calculator_button">Calculate</string>
+    <!-- Tela 1 - Erros -->
+    <string name="erro_price_etanol">Enter Ethanol Price</string>
+    <string name="erro_price_gas">Enter Gas Price</string>
+    <string name="erro_milage_etanol">Avarage Ethanol Consumption</string>
+    <string name="erro_milage_gas">Avarage Gas Consumption</string>
+    <!-- Tela 2 -->
+    <string name="km_litro">Km/Liter</string>
+    <string name="per_km"> / Km</string>
+</resources>

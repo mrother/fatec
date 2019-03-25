@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mauricio Rother</string>
+    <string name="fatec_address">R. Dr. Pedro Pioli, 158 - Americana/SP</string>
+    <string name="fatec_phone">+55 (19) 99822 0064</string>
+    <string name="fatec_web_page">http://www.codered.com.br/</string>
+    <string name="fatec_mission_title">Software Engineer</string>
+    <string name="fatec_mission_description">Proficient Software Engineer in Campinas area, with 20+ years’ experience programming and debugging software in a variety of languages including PHP, Python, Java, and SQL.</string>
+</resources>
