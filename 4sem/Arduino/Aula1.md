@@ -19,7 +19,8 @@
 - 20 pinos de E/S
 	- 14 Digitais
 	- 6 Analógicas
+- 3 Timers de hardware
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjkwMDUzLC0xMzI3ODI5Mzg0LDU5MT
+eyJoaXN0b3J5IjpbMjQ0NDYzNjY4LC0xMzI3ODI5Mzg0LDU5MT
 U2MzkwMF19
 -->
