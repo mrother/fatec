@@ -34,10 +34,12 @@
 São 14 pinos digitais que podem ser configurados como entrada ou saída.
 Pinos digitais só aceitam os valores 1 ou 0, ou true/false, ou HIGH / LOW. As três formas são equivalentes.
 Para configurar, use a função:
+
 `pinMode(<pino>, INPUT/OUTPUT)`
 
 Os pinos digitais são numerador de 0 a 13.
+Os pinos 0 e 1 são usados na comunicação serial pela USB. Evite de usar estes pinos.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4MDM1ODcyLDI0NDQ2MzY2OCwtMTMyNz
-gyOTM4NCw1OTE1NjM5MDBdfQ==
+eyJoaXN0b3J5IjpbLTEyNjM5MTc3NzIsMjQ0NDYzNjY4LC0xMz
+I3ODI5Mzg0LDU5MTU2MzkwMF19
 -->
