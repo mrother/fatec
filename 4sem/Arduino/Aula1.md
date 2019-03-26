@@ -88,9 +88,22 @@ void loop() {
 }
 ```
 
-O
+O mesmo código, sem  usar o millis()
+```c
+#define pinLed  13
+
+void setup() {
+  pinMode(pinLed, OUTPUT);
+
+}
+
+void loop() {
+    digitalWrite(pinLed, (millis()>>8)&1);
+  }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwOTU2Mjk0MSwtMTg4MjIxNDg2OCwtMT
+eyJoaXN0b3J5IjpbLTY5NjMxODE1NSwtMTg4MjIxNDg2OCwtMT
 I2MzkxNzc3MiwyNDQ0NjM2NjgsLTEzMjc4MjkzODQsNTkxNTYz
 OTAwXX0=
 -->
