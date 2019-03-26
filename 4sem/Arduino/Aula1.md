@@ -9,6 +9,12 @@
 - Suporte USB
 	- Carregar programas
 	- Comunicação com o computador
+
+### Micro controlador
+- CPU roda a 16 MHz
+- Memória
+- Flash - 32kb (4k bootloader)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjc4MjkzODQsNTkxNTYzOTAwXX0=
+eyJoaXN0b3J5IjpbLTczNzkyODQ4NiwtMTMyNzgyOTM4NCw1OT
+E1NjM5MDBdfQ==
 -->
