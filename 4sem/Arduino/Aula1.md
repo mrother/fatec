@@ -26,9 +26,10 @@
 ## Linguagem Wiring (script para C++)
 
 -Programa roda dentro de um loop infinito
-	- Rotina Setup()
+	- Rotina setup()
+		- É executada 1 vez quando o Arduino é ligado.
 	- Rotina Loop()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE2Mjg0NzY1LDI0NDQ2MzY2OCwtMTMyNz
-gyOTM4NCw1OTE1NjM5MDBdfQ==
+eyJoaXN0b3J5IjpbLTE4MTY3MDcyMjUsMjQ0NDYzNjY4LC0xMz
+I3ODI5Mzg0LDU5MTU2MzkwMF19
 -->
