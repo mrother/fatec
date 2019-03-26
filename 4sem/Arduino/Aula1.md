@@ -20,7 +20,15 @@
 	- 14 Digitais
 	- 6 Analógicas
 - 3 Timers de hardware
+
+# Programação
+
+## Linguagem Wiring (script para C++)
+
+-Programa roda dentro de um loop infinito
+	- Rotina Setup()
+	- Rotina Loop()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0NDYzNjY4LC0xMzI3ODI5Mzg0LDU5MT
-U2MzkwMF19
+eyJoaXN0b3J5IjpbNzE2Mjg0NzY1LDI0NDQ2MzY2OCwtMTMyNz
+gyOTM4NCw1OTE1NjM5MDBdfQ==
 -->
