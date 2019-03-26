@@ -64,8 +64,31 @@ Função `millis()`
 `unsigned long millis()`
 `unsigned long micros()`
 
+Código sem bloqueio do processamento
+```c
+#define pinLed  13
+#define lapse   100
 
+unsigned long nextBlink = 0;
+boolean ledVal = true;
+
+void setup() {
+  pinMode(pinLed, OUTPUT);
+
+}
+
+void loop() {
+
+  if (millis() >= nextBlink)
+  {
+    digitalWrite(pinLed, ledVal);
+    ledVal = !ledVal;
+    nextBlink = millis() + lapse;
+  }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODIyMTQ4NjgsLTEyNjM5MTc3NzIsMj
-Q0NDYzNjY4LC0xMzI3ODI5Mzg0LDU5MTU2MzkwMF19
+eyJoaXN0b3J5IjpbMTcyMjM3NjQ0LC0xODgyMjE0ODY4LC0xMj
+YzOTE3NzcyLDI0NDQ2MzY2OCwtMTMyNzgyOTM4NCw1OTE1NjM5
+MDBdfQ==
 -->
