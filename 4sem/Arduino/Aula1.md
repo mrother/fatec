@@ -13,8 +13,10 @@
 ### Micro controlador
 - CPU roda a 16 MHz
 - Memória
-- Flash - 32kb (4k bootloader)
+- Flash - 32Kb (4K bootloader)
+- Memória RAM 2K
+- Memória EPROM 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNzkyODQ4NiwtMTMyNzgyOTM4NCw1OT
-E1NjM5MDBdfQ==
+eyJoaXN0b3J5IjpbOTA4NTA1OTM4LC0xMzI3ODI5Mzg0LDU5MT
+U2MzkwMF19
 -->
