@@ -29,7 +29,11 @@
 	- Rotina `setup()`
 		- É executada 1 vez quando o Arduino é ligado. A serguir, a execução vai para a função `loop()`, de onde não sai mais.
 	- Rotina Loop()
+
+### Pinos Digitais
+São 14 pinos digitais que podem ser configurados como entrada ou saída.
+Pinos digitais só aceitam 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NDIxMTAyOSwyNDQ0NjM2NjgsLTEzMj
+eyJoaXN0b3J5IjpbMTU0NjAwMzE0NiwyNDQ0NjM2NjgsLTEzMj
 c4MjkzODQsNTkxNTYzOTAwXX0=
 -->
