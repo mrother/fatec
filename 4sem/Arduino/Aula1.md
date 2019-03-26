@@ -33,7 +33,11 @@
 ### Pinos Digitais
 São 14 pinos digitais que podem ser configurados como entrada ou saída.
 Pinos digitais só aceitam os valores 1 ou 0, ou true/false, ou HIGH / LOW. As três formas são equivalentes.
+Para configurar, use a função:
+`pinMode(<pino>, INPUT/OUTPUT)`
+
+Os pinos digitais são numerador de 0 a 13
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0ODI3NTA1NiwyNDQ0NjM2NjgsLTEzMj
+eyJoaXN0b3J5IjpbMTgzMzQ0MDM5MCwyNDQ0NjM2NjgsLTEzMj
 c4MjkzODQsNTkxNTYzOTAwXX0=
 -->
