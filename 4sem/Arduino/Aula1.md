@@ -36,8 +36,8 @@ Pinos digitais só aceitam os valores 1 ou 0, ou true/false, ou HIGH / LOW. As t
 Para configurar, use a função:
 `pinMode(<pino>, INPUT/OUTPUT)`
 
-Os pinos digitais são numerador de 0 a 13
+Os pinos digitais são numerador de 0 a 13.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzQ0MDM5MCwyNDQ0NjM2NjgsLTEzMj
-c4MjkzODQsNTkxNTYzOTAwXX0=
+eyJoaXN0b3J5IjpbNjY4MDM1ODcyLDI0NDQ2MzY2OCwtMTMyNz
+gyOTM4NCw1OTE1NjM5MDBdfQ==
 -->
