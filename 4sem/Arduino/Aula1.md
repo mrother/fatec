@@ -39,7 +39,33 @@ Para configurar, use a função:
 
 Os pinos digitais são numerador de 0 a 13.
 Os pinos 0 e 1 são usados na comunicação serial pela USB. Evite de usar estes pinos.
+
+### Programas
+
+
+Piscar LED básico
+```c
+#define pinLed  13
+
+void setup() {
+  pinMode(pinLed, OUTPUT);
+
+}
+
+void loop() {
+  digitalWrite(pinLed, HIGH);
+  delay(30);
+  digitalWrite(pinLed, LOW);
+  delay(30);
+}
+```
+
+Função `millis()`
+`unsigned long millis()`
+`unsigned long micros()`
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjM5MTc3NzIsMjQ0NDYzNjY4LC0xMz
-I3ODI5Mzg0LDU5MTU2MzkwMF19
+eyJoaXN0b3J5IjpbLTE4ODIyMTQ4NjgsLTEyNjM5MTc3NzIsMj
+Q0NDYzNjY4LC0xMzI3ODI5Mzg0LDU5MTU2MzkwMF19
 -->
