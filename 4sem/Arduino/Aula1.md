@@ -32,8 +32,8 @@
 
 ### Pinos Digitais
 São 14 pinos digitais que podem ser configurados como entrada ou saída.
-Pinos digitais só aceitam 
+Pinos digitais só aceitam os valores 1 ou 0, ou true/false, ou HIGH / LOW. As três formas são equivalentes.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NjAwMzE0NiwyNDQ0NjM2NjgsLTEzMj
+eyJoaXN0b3J5IjpbMTE0ODI3NTA1NiwyNDQ0NjM2NjgsLTEzMj
 c4MjkzODQsNTkxNTYzOTAwXX0=
 -->
