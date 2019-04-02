@@ -10,7 +10,7 @@ package cartesiano;
  * @author 0040481721008
  */
 public class Ponto {
-    private double x, y;
+    protected double x, y;
 
     // construtor pradrão
 
