@@ -11,6 +11,9 @@ Precisam ser configurados no `setup()` para entrada ou saída.
 ```c
 pinMode(<NUMERO DO PINO>, INPUT/OUTPUT);
 ```
+
+### Led (Light Emiter Diode)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MzA4MjYwMSwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTEzNzk4NjMzMzksLTIwODg3NDY2MTJdfQ
+==
 -->
