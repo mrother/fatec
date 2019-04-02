@@ -13,7 +13,9 @@ pinMode(<NUMERO DO PINO>, INPUT/OUTPUT);
 ```
 
 ### Led (Light Emiter Diode)
+Diodo emissor de luz
+Diodo é um semicondutor
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzk4NjMzMzksLTIwODg3NDY2MTJdfQ
+eyJoaXN0b3J5IjpbLTE1MDU3ODc5OTYsLTIwODg3NDY2MTJdfQ
 ==
 -->
