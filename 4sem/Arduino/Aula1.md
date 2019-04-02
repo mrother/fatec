@@ -25,7 +25,7 @@
 
 ## Linguagem Wiring (script para C++)
 
--Programa roda dentro de um loop infinito
+- Programa roda dentro de um loop infinito
 	- Rotina `setup()`
 		- É executada 1 vez quando o Arduino é ligado. A serguir, a execução vai para a função `loop()`, de onde não sai mais.
 	- Rotina Loop()
@@ -61,8 +61,8 @@ void loop() {
 ```
 
 Função `millis()`
-`unsigned long millis()`
-`unsigned long micros()`
+`unsigned long millis() // milisegundos`
+`unsigned long micros() // microsegundos`
 
 Código sem bloqueio do processamento
 ```c
@@ -103,7 +103,7 @@ void loop() {
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NjMxODE1NSwtMTg4MjIxNDg2OCwtMT
-I2MzkxNzc3MiwyNDQ0NjM2NjgsLTEzMjc4MjkzODQsNTkxNTYz
-OTAwXX0=
+eyJoaXN0b3J5IjpbMTY3OTQ4OTMzMCwtNjk2MzE4MTU1LC0xOD
+gyMjE0ODY4LC0xMjYzOTE3NzcyLDI0NDQ2MzY2OCwtMTMyNzgy
+OTM4NCw1OTE1NjM5MDBdfQ==
 -->
