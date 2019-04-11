@@ -1,12 +1,16 @@
 # Avaliação P1 (B)
 
-1. Nossa locadora de filmes está fazendo aniversário, por isso vamos mandar um email de agradecimento a todos os clientes e funcionários. Faça uma consulta que retorne todos os nomes e emi
+1. Nossa locadora de filmes está fazendo aniversário, por isso vamos mandar um email de agradecimento a todos os clientes e funcionários. Faça uma consulta que retorne todos os nomes e emails dos clientes e funcionários.
+Ordene por nome e último nome.
+Colunas esperadas (real ou alias): primeiro_nome, ultimo_nome, email
 ```sql
 SELECT C.primeiro_nome, ultimo_nome, email FROM cliente C
 UNION
 SELECT F.primeiro_nome, ultimo_nome, email FROM funcionario F
 ORDER BY primeiro_nome, ultimo_nome;
 ```
+---
+2. Faça um ranking das categori
 ```sql
 SELECT C.nome, SUM(P.valor) montante FROM categoria C
 LEFT JOIN filme_categoria FC ON C.categoria_id = FC.categoria_id
@@ -32,5 +36,5 @@ LEFT JOIN funcionario F ON F.funcionario_id = A.funcionario_id
 GROUP BY F.funcionario_id;
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg0MzUzNDUsLTE2OTUzMjg4NDddfQ==
+eyJoaXN0b3J5IjpbNTUzNDEzNjk2LC0xNjk1MzI4ODQ3XX0=
 -->
