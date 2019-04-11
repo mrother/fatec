@@ -1,3 +1,6 @@
+# Avaliação P1 (B)
+
+1. Nossa locadora de filmes está fazendo aniversário, por isso vamos mandar um email de agradecimento a todos os clientes e funcionários. Faça uma consulta que retorne todos os nomes e emi
 ```sql
 SELECT C.primeiro_nome, ultimo_nome, email FROM cliente C
 UNION
@@ -29,5 +32,5 @@ LEFT JOIN funcionario F ON F.funcionario_id = A.funcionario_id
 GROUP BY F.funcionario_id;
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTUzMjg4NDddfQ==
+eyJoaXN0b3J5IjpbNjg0MzUzNDUsLTE2OTUzMjg4NDddfQ==
 -->
