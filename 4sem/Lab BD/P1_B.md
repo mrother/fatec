@@ -38,13 +38,14 @@ LEFT JOIN pagamento P ON P.aluguel_id = A.aluguel_id
 GROUP BY C.nome;
 ```
 ---
-4. Qual a data do primeiro aluguel realizado por cada funcionário
+4. Qual a data do primeiro aluguel realizado por cada funcionário?
+Colunas esperadas (real ou alias): primeiro_nome, data
+
 ```sql
 SELECT F.primeiro_nome, MIN(A.data_de_aluguel) data FROM aluguel A
 LEFT JOIN funcionario F ON F.funcionario_id = A.funcionario_id
 GROUP BY F.funcionario_id;
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDI4MjA5NTksLTE2OTUzMjg4NDddfQ
-==
+eyJoaXN0b3J5IjpbLTgyMTI2NDQ3NywtMTY5NTMyODg0N119
 -->
