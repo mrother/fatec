@@ -57,18 +57,22 @@ LEFT JOIN loja L ON L.loja_id = I.loja_id
 LEFT JOIN filme F ON F.filme_id = I.filme_id
 GROUP BY F.titulo
 ORDER BY tempo DESC;
+```
 ```sql
 /* 9. Qual dia da semana têm mais aluguéis de filmes. */ 
 SELECT DAYNAME(data_de_aluguel) dia, COUNT(*) total FROM aluguel
 GROUP BY dia
 ORDER BY total DESC;
+```
 ```sql
 /* 10. Faça uma lista dos atores que a segunda letra do nome seja "A". */
 SELECT primeiro_nome FROM ator
 WHERE SUBSTR(primeiro_nome, 2, 1) = 'A';
+```
 ```sql
 /* 11. Faça uma lista dos filmes que contenham no campo recursos especiais "Behind the Scenes" */
 SELECT * FROM filme WHERE INSTR(recursos_especiais, 'Behind the Scenes') ;
+```
 ```sql
 /* 12. Faça uma lista com a quantidade de filmes de cada categoria, porém o nome da categoria deve estar em Português. */
 SELECT replace(C.nome
@@ -78,5 +82,5 @@ LEFT JOIN filme F ON F.filme_id = FC.filme_id
 GROUP BY C.nome;
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MjY5MTA0Ml19
+eyJoaXN0b3J5IjpbNDYxNTkyOTYyXX0=
 -->
