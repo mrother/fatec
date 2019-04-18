@@ -75,12 +75,31 @@ SELECT * FROM filme WHERE INSTR(recursos_especiais, 'Behind the Scenes') ;
 ```
 ```sql
 /* 12. Faça uma lista com a quantidade de filmes de cada categoria, porém o nome da categoria deve estar em Português. */
-SELECT replace(C.nome
+SELECT case C.categoria_id
+		 when '1' then 'Ação'
+ 		 when '2' then 'Animação'
+		 when '3' then 'Crianças'
+		 when '4' then 'Clássicos'
+		 when '5' then 'Comédia'
+		 when '6' then 'Documentário'
+		 when '7' then 'Drama'
+		 when '8' then 'Família'
+		 when '9' then 'Estrangeiro'
+		 when '10' then 'Jogos'
+		 when '11' then 'Horror'
+		 when '12' then 'Música'
+		 when '13' then 'Jogo'
+		 when '14' then 'Ficção Científica'
+		 when '15' then 'Esportes'
+ 		 when '16' then 'Viagem'
+		 end
+, COUNT(*) qtdd
 FROM categoria C
 LEFT JOIN filme_categoria FC ON FC.categoria_id = C.categoria_id
 LEFT JOIN filme F ON F.filme_id = FC.filme_id
-GROUP BY C.nome;
+GROUP BY C.nome
+ORDER BY qtdd DESC;
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxNTkyOTYyXX0=
+eyJoaXN0b3J5IjpbMjg5NTA2MjE4LDQ2MTU5Mjk2Ml19
 -->
