@@ -34,9 +34,13 @@ Estrutura do projeto de informatica
 11. Custos / Real / G.R.Acum
 12. Custos / Comparativo
 13. Riscos / Planejamento
-14. Aquisições
-15. Termo de Encerramento do Projeto
+14. Aquisições / Planejamento
+15. Aquisições / Planilha de aquisição de fornecedores / Produtos
+16. Recursos / Recursos humanos - Perfil Profissional
+17. Recursos / Recursos humanos - Contatos
+18. Recursos / Recursos humanos - Matriz Atividades x Responsabilidades
+19. Termo de Encerramento do Projeto
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjY1NDYxNzQsMTMwODc5Mzg0MF19
+eyJoaXN0b3J5IjpbLTE5MjM5MDQyNTgsMTMwODc5Mzg0MF19
 -->
