@@ -9,6 +9,34 @@ Estrutura do projeto de informatica
 4. Cronograma / Sequenciamento
 5. Cronograma / Cronograma
 6. Integração / TEP
+
+
+## Lista de documentos para o projeto
+1. Termo de Abertura do Projeto
+	- Logotipo
+	- PMO
+	- Sigla
+	- Nome do Projeto
+	- "Termo de Abertura do Projeto"
+	- Versão
+	- Conteúdo
+		- Objetivo
+2. Escopo / Atividades
+	- Id, Título, Descrição breve, Responsável, Recursos materiais
+3. Escopo EAP 
+4. Cronograma / Atividades
+5. Cronograma / Cronograma em si (pode ser junto com ativ)
+6. Custos / Orçamento
+7. Custos / Orçamento / GOM
+8. Custos / Orçamento / G O Acum.
+9. Custos / Real
+10. Custos / Real / G.R.M
+11. Custos / Real / G.R.Acum
+12. Custos / Comparativo
+13. Riscos / Planejamento
+14. Aquisições
+15. Termo de Encerramento do Projeto
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNDQ2MzY5MiwxMzA4NzkzODQwXX0=
+eyJoaXN0b3J5IjpbLTE4MjY1NDYxNzQsMTMwODc5Mzg0MF19
 -->
