@@ -4,8 +4,17 @@ Como todos os métodos em uma interface são sempre públicos e abstratos, as pa
 O mecanismo de herança funciona também com interfaces, mas é importante lembrar que interfaces só podem herdar de interfaces e classes só herdam de classes.
 Quando uma classe implementa uma interface, objetos dessa classe também são considerados instâncias da interface. Entretanto, interfaces não são classes e não podem ser instanciadas.
 
+## Declaração
 
-> Atributo estático é de classe, e não de instância
+```java
+public interface NomeInterface
+{
+	// atributos
+	// métodos
+}
+```
+
+### Exemplo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NjI3NDQyMl19
+eyJoaXN0b3J5IjpbLTIxMTM4MDM5NDZdfQ==
 -->
