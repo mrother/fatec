@@ -14,7 +14,15 @@ public interface NomeInterface
 }
 ```
 
-### Exemplo
+### Exemplo:
+```java
+public interface ExemploInt {
+	double pi = 3.1416;
+	
+	void metodo1();
+	int metodo2(int param);
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTM4MDM5NDZdfQ==
+eyJoaXN0b3J5IjpbLTc4OTc4NDQ3Ml19
 -->
