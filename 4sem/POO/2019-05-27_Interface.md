@@ -23,6 +23,12 @@ public interface ExemploInt {
 	int metodo2(int param);
 }
 ```
+```java
+
+public class UmaClasse implements UmaInterface, OutraInterface {
+
+}
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4OTc4NDQ3Ml19
+eyJoaXN0b3J5IjpbLTk3NTczNTcsLTc4OTc4NDQ3Ml19
 -->
