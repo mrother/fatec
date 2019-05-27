@@ -40,6 +40,21 @@ public class Cartesiano {
         Segmento s = new Segmento(p1, p2);
         
         s.print();
+        
+        Poligono plg = new Poligono();
+        plg.addVertex(new Ponto(1,5));
+        plg.addVertex(new Ponto(3,7));
+        plg.addVertex(new Ponto(10,12));
+        
+        if (!plg.addVertex(new Ponto(3, 7))) {
+            System.out.println("Ponto já existe!");
+        }
+        
+        System.out.println(
+                "Perimetro: " + plg.perimeter() + "\n" +
+                "Centro Geométrico: ");
+        Ponto cg = plg.geoCenter();
+        cg.print("...");
     }
     
 }

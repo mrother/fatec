@@ -149,6 +149,7 @@ public class Ponto {
         System.out.println(toString());
     }
     
+    @Override
     public String toString() {
         return "(" + x + "," + y +")";
     }
