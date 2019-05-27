@@ -23,12 +23,17 @@ public interface ExemploInt {
 	int metodo2(int param);
 }
 ```
+### Implementação
+
 ```java
-
 public class UmaClasse implements UmaInterface, OutraInterface {
-
+	// atributos
+	// construtores
+	// métodos
+	// implementação dos métodos
+	// abstratos das interfaces
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTczNTcsLTc4OTc4NDQ3Ml19
+eyJoaXN0b3J5IjpbMTkxMzczODg1NywtNzg5Nzg0NDcyXX0=
 -->
