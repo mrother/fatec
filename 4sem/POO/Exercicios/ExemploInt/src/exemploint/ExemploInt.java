@@ -5,7 +5,7 @@
  */
 package exemploint;
 
-import exemploint.sorter.SortedList;
+import exemploint.sorter.*;
 
 /**
  *
@@ -24,17 +24,19 @@ public class ExemploInt {
         Aluno d = new Aluno("Eduardo", 1);
         Aluno e = new Aluno("Fulano", 40);
 
-        SortedList s = new SortedList(5);
+        SortedList s = new SortedList(3);
 
-        s.Add(a);
-        s.Add(b);
-        s.Add(c);
-        s.Add(d);
-        s.Add(e);
-        
+        try {
+            s.Add(a);
+            s.Add(b);
+            s.Add(c);
+            s.Add(d);
+            s.Add(e);
+        } catch (ListaLotadaExc ex) {
+            System.out.print(ex);
+        }
+
         s.sort();
         s.printAll();
-
     }
-
 }

@@ -19,13 +19,12 @@ public class SortedList {
         count = 0;
     }
 
-    public boolean Add(SorteableItem item) {
+    public void Add(SorteableItem item) throws ListaLotadaExc {
         if (count >= List.length) {
-            return false;
+            throw new ListaLotadaExc();
         }
         List[count] = item;
         count++;
-        return true;
     }
 
     public void printAll() {

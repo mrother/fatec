@@ -14,10 +14,8 @@ public class CarroConsignado extends Carro {
     public String nomeProprietario;
     public double valorVenda;
 
-    // Construtor tem os parâmetros necessários para instanciar os objetos (não são deduzíveis)
-    // Nesse caso, os mesmos da classe ancestral + os parâmetros específicos deste descendente
     public CarroConsignado(String placa, String ano, String modelo, String nomeProprietario, double valorVenda) {
-        super(placa, ano, modelo); // Invoca o construtor da classe ancestral
+        super(placa, ano, modelo);
         this.nomeProprietario = nomeProprietario;
         this.valorVenda = valorVenda;
     }
