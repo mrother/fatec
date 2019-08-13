@@ -31,7 +31,12 @@
 - Meios não guiados de transmissão
 	- Conceitos de frequencia
 	- Tipos de tecnologia wireless
-	- Vantagens e
+	- Vantagens e desvantagens
+	- Padrões WiFi
+	- Configurações de Segurança
+	- Testes e simulação
+- Meios guiados
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNjQ0NDAxMF19
+eyJoaXN0b3J5IjpbOTQ2NTUwNjczXX0=
 -->
