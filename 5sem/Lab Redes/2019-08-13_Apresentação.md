@@ -59,6 +59,8 @@
 	- Simulação
 - Redes WAN
 	- Simulação: Cliente x operadora
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDY4MjAyNDRdfQ==
+eyJoaXN0b3J5IjpbLTIxNDU5NjQwLC0yMDA2ODIwMjQ0XX0=
 -->
