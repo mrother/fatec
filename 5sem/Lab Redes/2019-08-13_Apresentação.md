@@ -45,8 +45,18 @@
 - Roteamento de pacotes
 	- Conceitos de roteamento
 	- Tipos de roteamento
+	- Configurações (IOS - cli)
+	- Tabela de roteamento
+	- Simulação
+- Serviços de redes
+	- DHCP
+	- DNS
+- Redes Locais Virtuais (VLANs)
+	- Características
+	- Vantagens
 	- Configurações
+	- Roteamento de VLANs
 	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4MzMzNjc0OF19
+eyJoaXN0b3J5IjpbLTk5NTg2OTc5Ml19
 -->
