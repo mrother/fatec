@@ -56,7 +56,9 @@
 	- Vantagens
 	- Configurações
 	- Roteamento de VLANs
-	- 
+	- Simulação
+- Redes WAN
+	- Simulação: Cliente x operadora
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NTg2OTc5Ml19
+eyJoaXN0b3J5IjpbLTIwMDY4MjAyNDRdfQ==
 -->
