@@ -22,7 +22,16 @@
 	- Funcionamento
 	- Vantagens e desvantagens
 	- Simulação
-- 
+- Cálculo de sub-redes:
+	- Endereços privados vs públicos
+	- IPv4
+	- Endereços válidos vs endereços reservados
+	- Máscaras de rede
+	- Exercícios
+- Meios não guiados de transmissão
+	- Conceitos de frequencia
+	- Tipos de tecnologia wireless
+	- Vantagens e
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3ODQyOTI4XX0=
+eyJoaXN0b3J5IjpbLTMyNjQ0NDAxMF19
 -->
