@@ -35,8 +35,13 @@
 	- Padrões WiFi
 	- Configurações de Segurança
 	- Testes e simulação
-- Meios guiados
-	- 
+- Meios guiados de transmissão
+	- Tipos de cabeamento (metálicos x óticos)
+	- Padrões, tipos e categorias
+	- Utilização e crimpagem de cabos de rede
+	- Testes físicos de cabeamento
+	- Simulação
+- Revisão: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ2NTUwNjczXX0=
+eyJoaXN0b3J5IjpbLTEwOTQwNTg1ODVdfQ==
 -->
