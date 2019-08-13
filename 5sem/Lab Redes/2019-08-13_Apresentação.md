@@ -65,7 +65,7 @@
 - Física
 	- Emissor: Entregar os bits ao meio físico de transmissão
 	- Receptor: Receber os bits do meio de transmissão e entregá-los à camada superior
+- Enlace
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTM0NTQwMTAsLTIwMDY4MjAyNDRdfQ
-==
+eyJoaXN0b3J5IjpbMzk0MzY2ODgxLC0yMDA2ODIwMjQ0XX0=
 -->
