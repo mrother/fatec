@@ -60,7 +60,12 @@
 - Redes WAN
 	- Simulação: Cliente x operadora
 
+## Camadas de Redes (ISO-OSI)
 
+- Física
+	- Emissor: Entregar os bits ao meio físico de transmissão
+	- Receptor: Receber os bits do meio de transmissão e entregá-los à camada superior
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDU5NjQwLC0yMDA2ODIwMjQ0XX0=
+eyJoaXN0b3J5IjpbLTE4OTM0NTQwMTAsLTIwMDY4MjAyNDRdfQ
+==
 -->
