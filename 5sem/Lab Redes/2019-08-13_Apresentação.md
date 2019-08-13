@@ -41,7 +41,12 @@
 	- Utilização e crimpagem de cabos de rede
 	- Testes físicos de cabeamento
 	- Simulação
-- Revisão: 
+- Revisão: Camada 3 no modelo OSI
+- Roteamento de pacotes
+	- Conceitos de roteamento
+	- Tipos de roteamento
+	- Configurações
+	- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTQwNTg1ODVdfQ==
+eyJoaXN0b3J5IjpbMTk4MzMzNjc0OF19
 -->
