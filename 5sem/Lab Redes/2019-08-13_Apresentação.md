@@ -66,8 +66,9 @@
 	- Emissor: Entregar os bits ao meio físico de transmissão
 	- Receptor: Receber os bits do meio de transmissão e entregá-los à camada superior
 - Enlace
-	- Identificar e tentar corrigir possíveis int
+	- Identificar e tentar corrigir possíveis interferências
+	- Organizar logicamente em bits
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ4MDUxNTM4LDM5NDM2Njg4MSwtMjAwNj
-gyMDI0NF19
+eyJoaXN0b3J5IjpbLTE3ODYxMDg5NjQsMzk0MzY2ODgxLC0yMD
+A2ODIwMjQ0XX0=
 -->
