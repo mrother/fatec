@@ -3,6 +3,7 @@
 
 #### Prof. André Lima
 andre.lima42@fatec.sp.gov.br
+
 andredelima.andre@gmail.com
 
 |Prova| Data | Teoria
@@ -16,7 +17,7 @@ andredelima.andre@gmail.com
 **Média** = $\frac {(P1 + P2 + P3 + Projeto)} {4}$
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxODQwNzU1MywtMTMyMTI1MjgyMCwxNj
-AzNzQzMzQzLDE5NDc2MzgyNTMsLTQyMzIzNTM1OCw4NDM2MzI0
-MjldfQ==
+eyJoaXN0b3J5IjpbLTY1OTA3MjE3LDEwMTg0MDc1NTMsLTEzMj
+EyNTI4MjAsMTYwMzc0MzM0MywxOTQ3NjM4MjUzLC00MjMyMzUz
+NTgsODQzNjMyNDI5XX0=
 -->
