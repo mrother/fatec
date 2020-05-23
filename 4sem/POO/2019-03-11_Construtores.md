@@ -6,7 +6,7 @@ Caso a classe não declare nenhum, o Java cria um construtor padrão implícito 
 Geralmente os construtores recebem parâmetros para os valores dos atributos que são características.
 Atributos que são indicadores de estado geralmente têm seus valores iniciais conhecidos e não precisam ser informados por parâmetros.
 
-### Construtores no Java
+# Construtores no Java
 1. Tem exatamente o mesmo nome que a Classe.
 2. Não tem tipo de retorno.
 3. Faça construtores públicos.
@@ -28,5 +28,5 @@ public class Aluno {
 ### Operador de instanciação (new)
 Aloca memória suficiente para conter o objeto e em seguida chama o construtor indicado para preencher o objeto. Por fim, retorna uma referência ao objeto criado. Essa referência precisa ser armazenada em uma variável de referência. Objetos sem referência são destruídos pelo Java.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjI2NzM4MV19
+eyJoaXN0b3J5IjpbLTE1NzM3NzY0NjksLTE1NjI2NzM4MV19
 -->
